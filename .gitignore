@@ -23,3 +23,11 @@ secrets.json
 # OS
 Thumbs.db
 Desktop.ini
+
+# Local working files, not part of the published project
+data base/
+req/
+*.drawio
+*.drawio.bkp
+*.drawio.dtmp
+*.docx
