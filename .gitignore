@@ -1,0 +1,25 @@
+# Build
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+out/
+publish/
+
+# Visual Studio / Rider
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.idea/
+
+# Secrets
+.env
+.env.*
+appsettings.*.local.json
+secrets.json
+
+# OS
+Thumbs.db
+Desktop.ini

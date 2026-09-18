@@ -1,0 +1,926 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="29.6.6">
+  <diagram id="delivery-erd-complete" name="Delivery ERD">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="14" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3570" pageHeight="2984" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="DELIVERY OPERATIONS &amp;amp; SETTLEMENTS" style="text;html=1;align=left;fontSize=34;fontStyle=1;fontColor=#151515;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="100" y="45" width="1800" height="55" />
+        </mxCell>
+        <mxCell id="subtitle" value="DATABASE SCHEMA  /  22 TABLES  /  M1" style="text;html=1;align=left;fontSize=16;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="100" y="104" width="1600" height="30" />
+        </mxCell>
+        <mxCell id="legend" value="PK  Primary key     FK  Foreign key     UQ  Unique     UQ*  Composite / filtered     ?  Nullable" style="text;html=1;align=right;fontSize=14;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1820" y="104" width="1650" height="30" />
+        </mxCell>
+        <mxCell id="rel-0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Adjustment__AdjustmentId" target="Adjustment__ReversesAdjustmentId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2086" y="2458.0" />
+              <mxPoint x="2086" y="2598.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CourierCommission__CourierCommissionId" target="CourierCommissionPayment__CourierCommissionId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="3528" y="912.0" />
+              <mxPoint x="3528" y="1418.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CashAccount__CashAccountId" target="CashMovement__CashAccountId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2800" y="1390.0" />
+              <mxPoint x="2800" y="1924.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToOne;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="DeliveryOrder__OrderId" target="Collection__OrderId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1484" y="238.0" />
+              <mxPoint x="1484" y="940.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Merchant__MerchantId" target="DeliveryOrder__MerchantId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1372" y="238.0" />
+              <mxPoint x="1372" y="266" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Courier__CourierId" target="OrderAssignment__CourierId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2800" y="238.0" />
+              <mxPoint x="2800" y="294" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CourierRemittance__CourierRemittanceId" target="RemittanceAllocation__CourierRemittanceId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1484" y="1390.0" />
+              <mxPoint x="1484" y="1386" />
+              <mxPoint x="1372" y="1386" />
+              <mxPoint x="1372" y="1418.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CashAccount__CashAccountId" target="CourierRemittance__CashAccountId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2198" y="1390.0" />
+              <mxPoint x="2198" y="1386" />
+              <mxPoint x="2086" y="1386" />
+              <mxPoint x="2086" y="1446.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MerchantSettlement__MerchantSettlementId" target="MerchantSettlementLine__MerchantSettlementId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="644" y="1896.0" />
+              <mxPoint x="644" y="1918" />
+              <mxPoint x="770" y="1918" />
+              <mxPoint x="770" y="1924.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToOne;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MerchantPayout__MerchantPayoutId" target="CashMovement__MerchantPayoutId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2086" y="1896.0" />
+              <mxPoint x="2086" y="1974" />
+              <mxPoint x="2198" y="1974" />
+              <mxPoint x="2198" y="1980.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToOne;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Expense__ExpenseId" target="CashMovement__ExpenseId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2926" y="1896.0" />
+              <mxPoint x="2926" y="2030" />
+              <mxPoint x="2800" y="2030" />
+              <mxPoint x="2800" y="2036.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Collection__CollectionId" target="RemittanceAllocation__CollectionId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1484" y="912.0" />
+              <mxPoint x="1484" y="910" />
+              <mxPoint x="1358" y="910" />
+              <mxPoint x="1358" y="1442" />
+              <mxPoint x="1372" y="1442" />
+              <mxPoint x="1372" y="1446.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MerchantAccrual__MerchantAccrualId" target="MerchantSettlementLine__MerchantAccrualId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="644" y="1390.0" />
+              <mxPoint x="644" y="1386" />
+              <mxPoint x="630" y="1386" />
+              <mxPoint x="630" y="1946" />
+              <mxPoint x="770" y="1946" />
+              <mxPoint x="770" y="1952.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToOne;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CourierRemittance__CourierRemittanceId" target="CashMovement__CourierRemittanceId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2086" y="1390.0" />
+              <mxPoint x="2086" y="1386" />
+              <mxPoint x="2072" y="1386" />
+              <mxPoint x="2072" y="1876" />
+              <mxPoint x="2198" y="1876" />
+              <mxPoint x="2198" y="1952.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToOne;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CourierCommissionPayment__CourierCommissionPaymentId" target="CashMovement__CommissionPaymentId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2926" y="1390.0" />
+              <mxPoint x="2926" y="1386" />
+              <mxPoint x="2814" y="1386" />
+              <mxPoint x="2814" y="2002" />
+              <mxPoint x="2800" y="2002" />
+              <mxPoint x="2800" y="2008.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToOne;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Adjustment__AdjustmentId" target="CashMovement__AdjustmentId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2086" y="2458.0" />
+              <mxPoint x="2086" y="2058" />
+              <mxPoint x="2198" y="2058" />
+              <mxPoint x="2198" y="2064.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CashMovement__CashMovementId" target="Adjustment__OriginalCashMovementId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2198" y="1896.0" />
+              <mxPoint x="2198" y="1890" />
+              <mxPoint x="2212" y="1890" />
+              <mxPoint x="2212" y="2576" />
+              <mxPoint x="2086" y="2576" />
+              <mxPoint x="2086" y="2570.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Merchant__MerchantId" target="MerchantPhone__MerchantId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="644" y="238" />
+              <mxPoint x="644" y="940.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="DeliveryOrder__OrderId" target="OrderEvent__OrderId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1498" y="238" />
+              <mxPoint x="1498" y="952" />
+              <mxPoint x="1372" y="952" />
+              <mxPoint x="1372" y="940.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Courier__CourierId" target="Collection__CourierId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2086" y="238" />
+              <mxPoint x="2086" y="968.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="OrderAssignment__OrderAssignmentId" target="DeliveryAttempt__OrderAssignmentId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2940" y="238" />
+              <mxPoint x="2940" y="938" />
+              <mxPoint x="2800" y="938" />
+              <mxPoint x="2800" y="940.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Courier__CourierId" target="CourierCommission__CourierId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2786" y="238" />
+              <mxPoint x="2786" y="966" />
+              <mxPoint x="2926" y="966" />
+              <mxPoint x="2926" y="968.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="DeliveryOrder__OrderId" target="OrderAssignment__OrderId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2086" y="238.0" />
+              <mxPoint x="2086" y="140" />
+              <mxPoint x="2912" y="140" />
+              <mxPoint x="2912" y="266" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MerchantSettlement__MerchantSettlementId" target="MerchantPayout__MerchantSettlementId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="644" y="1896.0" />
+              <mxPoint x="644" y="1806" />
+              <mxPoint x="1484" y="1806" />
+              <mxPoint x="1484" y="1924.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Collection__CollectionId" target="Adjustment__OriginalCollectionId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1484" y="912.0" />
+              <mxPoint x="1484" y="910" />
+              <mxPoint x="1512" y="910" />
+              <mxPoint x="1512" y="2492" />
+              <mxPoint x="1484" y="2492" />
+              <mxPoint x="1484" y="2486.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Courier__CourierId" target="CourierRemittance__CourierId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2212" y="238" />
+              <mxPoint x="2212" y="1414" />
+              <mxPoint x="2086" y="1414" />
+              <mxPoint x="2086" y="1418.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToOne;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="DeliveryOrder__OrderId" target="CourierCommission__OrderId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2086" y="238.0" />
+              <mxPoint x="2086" y="224" />
+              <mxPoint x="2226" y="224" />
+              <mxPoint x="2226" y="826" />
+              <mxPoint x="2926" y="826" />
+              <mxPoint x="2926" y="940.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Merchant__MerchantId" target="MerchantSettlement__MerchantId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="770" y="238.0" />
+              <mxPoint x="770" y="1904" />
+              <mxPoint x="644" y="1904" />
+              <mxPoint x="644" y="1924.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MerchantAccrual__MerchantAccrualId" target="Adjustment__OriginalAccrualId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="644" y="1390.0" />
+              <mxPoint x="644" y="1386" />
+              <mxPoint x="784" y="1386" />
+              <mxPoint x="784" y="2520" />
+              <mxPoint x="1484" y="2520" />
+              <mxPoint x="1484" y="2514.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERone;startFill=0;endArrow=ERzeroToOne;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="DeliveryOrder__OrderId" target="MerchantAccrual__OrderId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1484" y="238.0" />
+              <mxPoint x="1484" y="224" />
+              <mxPoint x="1344" y="224" />
+              <mxPoint x="1344" y="1302" />
+              <mxPoint x="658" y="1302" />
+              <mxPoint x="658" y="1414" />
+              <mxPoint x="644" y="1414" />
+              <mxPoint x="644" y="1418.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#777777;strokeWidth=1.4;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=13;endSize=13;jumpStyle=arc;jumpSize=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CourierCommission__CourierCommissionId" target="Adjustment__OriginalCommissionId">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2926" y="912.0" />
+              <mxPoint x="2926" y="910" />
+              <mxPoint x="2800" y="910" />
+              <mxPoint x="2800" y="1302" />
+              <mxPoint x="2226" y="1302" />
+              <mxPoint x="2226" y="2548" />
+              <mxPoint x="2086" y="2548" />
+              <mxPoint x="2086" y="2542.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CompanySettings" value="CompanySettings" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="100" y="180" width="490" height="240" />
+        </mxCell>
+        <mxCell id="CompanySettings__CompanySettingsId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CompanySettingsId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;int&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CompanySettings">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CompanySettings__CompanyName" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CompanyName&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(150)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CompanySettings">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CompanySettings__CurrencyCode" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CurrencyCode&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;char(3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CompanySettings">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CompanySettings__TimeZoneId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;TimeZoneId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CompanySettings">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CompanySettings__OrderNumberPrefix" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OrderNumberPrefix&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(20)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CompanySettings">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CompanySettings__NextOrderNumber" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;NextOrderNumber&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CompanySettings">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CompanySettings__RowVersion" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RowVersion&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;rowversion&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CompanySettings">
+          <mxGeometry as="geometry" x="0" y="212" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Merchant" value="Merchant" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="820" y="180" width="490" height="184" />
+        </mxCell>
+        <mxCell id="Merchant__MerchantId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;int&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Merchant">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Merchant__MerchantName" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantName&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(150)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Merchant">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Merchant__DefaultMerchantFee" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;DefaultMerchantFee&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Merchant">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Merchant__IsActive" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;IsActive&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bit&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Merchant">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Merchant__CreatedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CreatedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Merchant">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder" value="DeliveryOrder" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1540" y="180" width="490" height="464" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__OrderId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OrderId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__MerchantId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;int&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__InternalOrderNumber" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;UQ&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;InternalOrderNumber&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(40)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__ExternalReference" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;UQ*&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ExternalReference&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__RecipientName" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RecipientName&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(150)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__RecipientPhoneNumber" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RecipientPhoneNumber&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(25)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__DeliveryAddress" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;DeliveryAddress&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(500)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="212" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__GoodsAmount" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;GoodsAmount&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="240" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__RecipientFee" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RecipientFee&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="268" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__MerchantFee" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantFee&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="296" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__CourierCommissionAmount" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CourierCommissionAmount&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="324" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__Status" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Status&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;varchar(30)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="352" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__CreatedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CreatedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="380" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__UpdatedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;UpdatedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="408" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryOrder__RowVersion" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RowVersion&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;rowversion&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryOrder">
+          <mxGeometry as="geometry" x="0" y="436" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Courier" value="Courier" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2260" y="180" width="490" height="212" />
+        </mxCell>
+        <mxCell id="Courier__CourierId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CourierId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;int&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Courier">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Courier__CourierName" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CourierName&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(150)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Courier">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Courier__PhoneNumber" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;PhoneNumber&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(25)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Courier">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Courier__DefaultCommission" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;DefaultCommission&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Courier">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Courier__IsActive" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;IsActive&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bit&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Courier">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Courier__CreatedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CreatedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Courier">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderAssignment" value="OrderAssignment" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2980" y="180" width="490" height="268" />
+        </mxCell>
+        <mxCell id="OrderAssignment__OrderAssignmentId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OrderAssignmentId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="OrderAssignment">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderAssignment__OrderId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OrderId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="OrderAssignment">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderAssignment__CourierId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CourierId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;int&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="OrderAssignment">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderAssignment__StartedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;StartedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="OrderAssignment">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderAssignment__EndedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;EndedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="OrderAssignment">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderAssignment__AssignedBy" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;AssignedBy&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="OrderAssignment">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderAssignment__ChangeReason" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ChangeReason&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(500)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="OrderAssignment">
+          <mxGeometry as="geometry" x="0" y="212" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderAssignment__HandoverProofReference" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;HandoverProofReference&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(500)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="OrderAssignment">
+          <mxGeometry as="geometry" x="0" y="240" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantPhone" value="MerchantPhone" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="100" y="854" width="490" height="156" />
+        </mxCell>
+        <mxCell id="MerchantPhone__MerchantPhoneId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantPhoneId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;int&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantPhone">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantPhone__MerchantId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;int&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantPhone">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantPhone__PhoneNumber" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;UQ*&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;PhoneNumber&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(25)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantPhone">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantPhone__IsPrimary" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;IsPrimary&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bit&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantPhone">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderEvent" value="OrderEvent" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="820" y="854" width="490" height="268" />
+        </mxCell>
+        <mxCell id="OrderEvent__OrderEventId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OrderEventId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="OrderEvent">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderEvent__OrderId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OrderId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="OrderEvent">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderEvent__PreviousStatus" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;PreviousStatus&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;varchar(30)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="OrderEvent">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderEvent__NewStatus" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;NewStatus&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;varchar(30)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="OrderEvent">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderEvent__OccurredAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OccurredAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="OrderEvent">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderEvent__RecordedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RecordedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="OrderEvent">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderEvent__RecordedBy" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RecordedBy&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="OrderEvent">
+          <mxGeometry as="geometry" x="0" y="212" width="490" height="28" />
+        </mxCell>
+        <mxCell id="OrderEvent__Reason" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Reason&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(500)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="OrderEvent">
+          <mxGeometry as="geometry" x="0" y="240" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Collection" value="Collection" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1540" y="854" width="490" height="268" />
+        </mxCell>
+        <mxCell id="Collection__CollectionId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CollectionId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Collection">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Collection__OrderId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK UQ&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OrderId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Collection">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Collection__CourierId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CourierId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;int&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Collection">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Collection__IdempotencyKey" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;UQ&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;IdempotencyKey&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;uniqueidentifier&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Collection">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Collection__Amount" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Amount&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Collection">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Collection__CollectedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CollectedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Collection">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Collection__RecordedBy" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RecordedBy&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Collection">
+          <mxGeometry as="geometry" x="0" y="212" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Collection__RowVersion" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RowVersion&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;rowversion&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Collection">
+          <mxGeometry as="geometry" x="0" y="240" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryAttempt" value="DeliveryAttempt" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2260" y="854" width="490" height="212" />
+        </mxCell>
+        <mxCell id="DeliveryAttempt__DeliveryAttemptId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;DeliveryAttemptId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryAttempt">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryAttempt__OrderAssignmentId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OrderAssignmentId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryAttempt">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryAttempt__Result" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Result&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;varchar(30)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryAttempt">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryAttempt__FailureReason" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;FailureReason&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(500)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryAttempt">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryAttempt__AttemptedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;AttemptedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryAttempt">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="DeliveryAttempt__Notes" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Notes&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(1000)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="DeliveryAttempt">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommission" value="CourierCommission" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2980" y="854" width="490" height="212" />
+        </mxCell>
+        <mxCell id="CourierCommission__CourierCommissionId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CourierCommissionId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommission">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommission__OrderId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK UQ&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OrderId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommission">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommission__CourierId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CourierId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;int&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommission">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommission__Amount" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Amount&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommission">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommission__AccruedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;AccruedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommission">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommission__RowVersion" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RowVersion&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;rowversion&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommission">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantAccrual" value="MerchantAccrual" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="100" y="1332" width="490" height="212" />
+        </mxCell>
+        <mxCell id="MerchantAccrual__MerchantAccrualId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantAccrualId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantAccrual">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantAccrual__OrderId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK UQ&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OrderId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantAccrual">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantAccrual__MerchantAmount" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantAmount&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantAccrual">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantAccrual__CompanyFee" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CompanyFee&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantAccrual">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantAccrual__AccruedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;AccruedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantAccrual">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantAccrual__RowVersion" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RowVersion&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;rowversion&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantAccrual">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="RemittanceAllocation" value="RemittanceAllocation" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="820" y="1332" width="490" height="184" />
+        </mxCell>
+        <mxCell id="RemittanceAllocation__RemittanceAllocationId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RemittanceAllocationId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="RemittanceAllocation">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="RemittanceAllocation__CourierRemittanceId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK UQ*&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CourierRemittanceId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="RemittanceAllocation">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="RemittanceAllocation__CollectionId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK UQ*&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CollectionId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="RemittanceAllocation">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="RemittanceAllocation__AllocatedAmount" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;AllocatedAmount&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="RemittanceAllocation">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="RemittanceAllocation__AllocatedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;AllocatedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="RemittanceAllocation">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierRemittance" value="CourierRemittance" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1540" y="1332" width="490" height="296" />
+        </mxCell>
+        <mxCell id="CourierRemittance__CourierRemittanceId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CourierRemittanceId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CourierRemittance">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierRemittance__CourierId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CourierId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;int&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CourierRemittance">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierRemittance__CashAccountId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CashAccountId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;int&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CourierRemittance">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierRemittance__IdempotencyKey" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;UQ&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;IdempotencyKey&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;uniqueidentifier&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CourierRemittance">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierRemittance__Amount" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Amount&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CourierRemittance">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierRemittance__ReceivedBy" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ReceivedBy&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CourierRemittance">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierRemittance__RemittedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RemittedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CourierRemittance">
+          <mxGeometry as="geometry" x="0" y="212" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierRemittance__ProofReference" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ProofReference&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(500)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CourierRemittance">
+          <mxGeometry as="geometry" x="0" y="240" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierRemittance__RowVersion" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RowVersion&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;rowversion&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CourierRemittance">
+          <mxGeometry as="geometry" x="0" y="268" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashAccount" value="CashAccount" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2260" y="1332" width="490" height="212" />
+        </mxCell>
+        <mxCell id="CashAccount__CashAccountId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CashAccountId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;int&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CashAccount">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashAccount__AccountName" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;AccountName&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CashAccount">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashAccount__AccountType" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;AccountType&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;varchar(20)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CashAccount">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashAccount__OpeningBalance" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OpeningBalance&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CashAccount">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashAccount__OpenedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OpenedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CashAccount">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashAccount__IsActive" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;IsActive&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bit&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CashAccount">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommissionPayment" value="CourierCommissionPayment" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2980" y="1332" width="490" height="296" />
+        </mxCell>
+        <mxCell id="CourierCommissionPayment__CourierCommissionPaymentId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CourierCommissionPaymentId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommissionPayment">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommissionPayment__CourierCommissionId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CourierCommissionId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommissionPayment">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommissionPayment__IdempotencyKey" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;UQ&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;IdempotencyKey&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;uniqueidentifier&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommissionPayment">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommissionPayment__PaymentReference" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;UQ&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;PaymentReference&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommissionPayment">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommissionPayment__Amount" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Amount&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommissionPayment">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommissionPayment__PaymentMethod" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;PaymentMethod&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;varchar(20)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommissionPayment">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommissionPayment__PaidAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;PaidAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommissionPayment">
+          <mxGeometry as="geometry" x="0" y="212" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommissionPayment__PaidBy" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;PaidBy&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommissionPayment">
+          <mxGeometry as="geometry" x="0" y="240" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CourierCommissionPayment__ProofReference" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ProofReference&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(500)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CourierCommissionPayment">
+          <mxGeometry as="geometry" x="0" y="268" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantSettlement" value="MerchantSettlement" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="100" y="1838" width="490" height="268" />
+        </mxCell>
+        <mxCell id="MerchantSettlement__MerchantSettlementId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantSettlementId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantSettlement">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantSettlement__MerchantId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;int&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantSettlement">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantSettlement__Status" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Status&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;varchar(20)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantSettlement">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantSettlement__CreatedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CreatedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantSettlement">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantSettlement__CreatedBy" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CreatedBy&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantSettlement">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantSettlement__ApprovedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ApprovedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantSettlement">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantSettlement__ApprovedBy" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ApprovedBy&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantSettlement">
+          <mxGeometry as="geometry" x="0" y="212" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantSettlement__RowVersion" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RowVersion&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;rowversion&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantSettlement">
+          <mxGeometry as="geometry" x="0" y="240" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantSettlementLine" value="MerchantSettlementLine" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="820" y="1838" width="490" height="184" />
+        </mxCell>
+        <mxCell id="MerchantSettlementLine__MerchantSettlementLineId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantSettlementLineId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantSettlementLine">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantSettlementLine__MerchantSettlementId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantSettlementId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantSettlementLine">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantSettlementLine__MerchantAccrualId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK UQ*&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantAccrualId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantSettlementLine">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantSettlementLine__SettlementAmount" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;SettlementAmount&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantSettlementLine">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantSettlementLine__ReleasedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ReleasedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantSettlementLine">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantPayout" value="MerchantPayout" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1540" y="1838" width="490" height="296" />
+        </mxCell>
+        <mxCell id="MerchantPayout__MerchantPayoutId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantPayoutId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantPayout">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantPayout__MerchantSettlementId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantSettlementId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantPayout">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantPayout__IdempotencyKey" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;UQ&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;IdempotencyKey&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;uniqueidentifier&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantPayout">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantPayout__PaymentReference" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;UQ&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;PaymentReference&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantPayout">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantPayout__Amount" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Amount&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantPayout">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantPayout__PaymentMethod" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;PaymentMethod&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;varchar(20)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantPayout">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantPayout__PaidAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;PaidAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantPayout">
+          <mxGeometry as="geometry" x="0" y="212" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantPayout__PaidBy" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;PaidBy&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="MerchantPayout">
+          <mxGeometry as="geometry" x="0" y="240" width="490" height="28" />
+        </mxCell>
+        <mxCell id="MerchantPayout__ProofReference" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ProofReference&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(500)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="MerchantPayout">
+          <mxGeometry as="geometry" x="0" y="268" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashMovement" value="CashMovement" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2260" y="1838" width="490" height="352" />
+        </mxCell>
+        <mxCell id="CashMovement__CashMovementId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CashMovementId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CashMovement">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashMovement__CashAccountId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CashAccountId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;int&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CashMovement">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashMovement__CourierRemittanceId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK UQ*&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CourierRemittanceId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CashMovement">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashMovement__MerchantPayoutId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK UQ*&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;MerchantPayoutId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CashMovement">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashMovement__CommissionPaymentId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK UQ*&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CommissionPaymentId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CashMovement">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashMovement__ExpenseId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK UQ*&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ExpenseId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CashMovement">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashMovement__AdjustmentId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK UQ*&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;AdjustmentId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CashMovement">
+          <mxGeometry as="geometry" x="0" y="212" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashMovement__Direction" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Direction&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;varchar(3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CashMovement">
+          <mxGeometry as="geometry" x="0" y="240" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashMovement__Amount" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Amount&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CashMovement">
+          <mxGeometry as="geometry" x="0" y="268" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashMovement__OccurredAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OccurredAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="CashMovement">
+          <mxGeometry as="geometry" x="0" y="296" width="490" height="28" />
+        </mxCell>
+        <mxCell id="CashMovement__RecordedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RecordedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="CashMovement">
+          <mxGeometry as="geometry" x="0" y="324" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Expense" value="Expense" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2980" y="1838" width="490" height="296" />
+        </mxCell>
+        <mxCell id="Expense__ExpenseId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ExpenseId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Expense">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Expense__IdempotencyKey" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;UQ&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;IdempotencyKey&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;uniqueidentifier&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Expense">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Expense__Category" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Category&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Expense">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Expense__Amount" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Amount&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Expense">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Expense__Reason" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Reason&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(500)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Expense">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Expense__PaidAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;PaidAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Expense">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Expense__RecordedBy" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RecordedBy&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Expense">
+          <mxGeometry as="geometry" x="0" y="212" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Expense__ApprovedBy" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ApprovedBy&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Expense">
+          <mxGeometry as="geometry" x="0" y="240" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Expense__ProofReference" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ProofReference&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(500)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Expense">
+          <mxGeometry as="geometry" x="0" y="268" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment" value="Adjustment" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1540" y="2400" width="490" height="464" />
+        </mxCell>
+        <mxCell id="Adjustment__AdjustmentId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;AdjustmentId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment__OriginalCollectionId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OriginalCollectionId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment__OriginalAccrualId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OriginalAccrualId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment__OriginalCommissionId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OriginalCommissionId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment__OriginalCashMovementId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OriginalCashMovementId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment__ReversesAdjustmentId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;FK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ReversesAdjustmentId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment__IdempotencyKey" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;UQ&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;IdempotencyKey&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;uniqueidentifier&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="212" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment__AmountDelta" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;AmountDelta&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;decimal(18,3)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="240" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment__Reason" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Reason&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(500)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="268" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment__Status" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Status&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;varchar(20)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="296" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment__CreatedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CreatedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="324" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment__CreatedBy" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CreatedBy&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="352" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment__ApprovedAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ApprovedAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="380" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment__ApprovedBy" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;ApprovedBy&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="408" width="490" height="28" />
+        </mxCell>
+        <mxCell id="Adjustment__RowVersion" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;RowVersion&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;rowversion&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="Adjustment">
+          <mxGeometry as="geometry" x="0" y="436" width="490" height="28" />
+        </mxCell>
+        <mxCell id="AuditEvent" value="AuditEvent" style="swimlane;html=1;startSize=44;horizontal=1;collapsible=0;rounded=0;fillColor=#ededed;swimlaneFillColor=#ffffff;strokeColor=#222222;strokeWidth=1.7;fontColor=#111111;fontFamily=Helvetica;fontStyle=1;fontSize=19;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="2980" y="2400" width="490" height="296" />
+        </mxCell>
+        <mxCell id="AuditEvent__AuditEventId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;AuditEventId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;bigint&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="AuditEvent">
+          <mxGeometry as="geometry" x="0" y="44" width="490" height="28" />
+        </mxCell>
+        <mxCell id="AuditEvent__EntityType" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;EntityType&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="AuditEvent">
+          <mxGeometry as="geometry" x="0" y="72" width="490" height="28" />
+        </mxCell>
+        <mxCell id="AuditEvent__EntityId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;EntityId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="AuditEvent">
+          <mxGeometry as="geometry" x="0" y="100" width="490" height="28" />
+        </mxCell>
+        <mxCell id="AuditEvent__Action" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;Action&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;varchar(30)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="AuditEvent">
+          <mxGeometry as="geometry" x="0" y="128" width="490" height="28" />
+        </mxCell>
+        <mxCell id="AuditEvent__BeforeData" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;BeforeData&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(max)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="AuditEvent">
+          <mxGeometry as="geometry" x="0" y="156" width="490" height="28" />
+        </mxCell>
+        <mxCell id="AuditEvent__AfterData" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;AfterData&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(max)?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="AuditEvent">
+          <mxGeometry as="geometry" x="0" y="184" width="490" height="28" />
+        </mxCell>
+        <mxCell id="AuditEvent__OccurredAt" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;OccurredAt&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;datetime2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="AuditEvent">
+          <mxGeometry as="geometry" x="0" y="212" width="490" height="28" />
+        </mxCell>
+        <mxCell id="AuditEvent__PerformedBy" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;PerformedBy&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;nvarchar(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=none;resizable=0;" vertex="1" parent="AuditEvent">
+          <mxGeometry as="geometry" x="0" y="240" width="490" height="28" />
+        </mxCell>
+        <mxCell id="AuditEvent__CorrelationId" value="&lt;table style=&quot;width:100%;font-size:13px;table-layout:fixed;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;width:55px;font-weight:bold;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;font-family:Helvetica;&quot;&gt;CorrelationId&lt;/td&gt;&lt;td style=&quot;width:112px;text-align:right;color:#555;&quot;&gt;uniqueidentifier?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;fillColor=#f7f7f7;strokeColor=none;resizable=0;" vertex="1" parent="AuditEvent">
+          <mxGeometry as="geometry" x="0" y="268" width="490" height="28" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
